@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Doceria Encanto</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Doceria Encanto</h1>
+            <div class="header-buttons">
+                <a href="../index.html">Início</a>
+                <a href="../catalogo/catalogo.html">Catálogo</a>
+                <a href="../sobre/sobre.html">Sobre Nós</a>
+                <a href="../contato.html">Contato</a>
+                <a href="../carrinho/carrinho.html">Carrinho</a>
+            </div>
+    </header>
+    <main>
+        <h2>Entre em Contato Conosco</h2>
+        <form action="#" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+            <!-- Adicione logo após o formulário -->
+    <section id="feedbacks">
+    <h2>Feedback dos Clientes</h2>
+    <div id="feedback-list"></div>
+</section>
+
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Doceria Encanto. Todos os direitos reservados.</p>
+    </footer>
+    <script src="../js/feedback.js"></script>
+</body>
+</html>

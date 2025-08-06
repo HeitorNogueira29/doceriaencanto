@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Doceria Encanto</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Catálogo de Produtos</h1>
+        <div class="header-buttons">
+                <a href="../index.html">Início</a>
+                <a href="../sobre/sobre.html">Sobre Nós</a>
+                <a href="../contato.html">Contato</a>
+                <a href="../carrinho/carrinho.html">Carrinho</a>
+            </div>
+    </header>
+    
+    <main>
+        <section class="produtos">
+            <h2>Nossos Produtos</h2>
+            <div class="produto">
+                <h3>Brownie</h3>
+                <p>Delicioso bolo de chocolate com cobertura cremosa.</p>
+                <p><strong>Preço:</strong> R$ 6,00</p>
+                <label for="quantidade-brownie">Quantidade:</label>
+                <input type="number" id="quantidade-brownie" min="1" value="1">
+                <button onclick="adicionarAoCarrinho('Brownie', 6.00, document.getElementById('quantidade-brownie').value, '-')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <h3>Copo da felicidade</h3>
+                <p>Uma seleção de doces variados para todos os gostos.</p>
+                <p><strong>Preço:</strong> R$ 12,00 (Pequeno) | R$ 15,00 (Médio)</p>
+                <label for="tamanho-copo">Tamanho:</label>
+                <select id="tamanho-copo">
+                    <option value="pequeno">Pequeno</option>
+                    <option value="medio">Médio</option>
+                </select>
+                <label for="quantidade-copo">Quantidade:</label>
+                <input type="number" id="quantidade-copo" min="1" value="1">
+                <button onclick="adicionarAoCarrinho('Copo da felicidade', document.getElementById('tamanho-copo').value === 'pequeno' ? 12.00 : 15.00, document.getElementById('quantidade-copo').value, document.getElementById('tamanho-copo').value)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <h3>Delícia de abacaxi</h3>
+                <p>Uma sobremesa refrescante e saborosa.</p>
+                <p><strong>Preço:</strong> R$ 9,00</p>
+                <label for="quantidade-abacaxi">Quantidade:</label>
+                <input type="number" id="quantidade-abacaxi" min="1" value="1">
+                <button onclick="adicionarAoCarrinho('Delícia de abacaxi', 9.00, document.getElementById('quantidade-abacaxi').value, '-')">Adicionar ao Carrinho</button>
+            </div>
+            <!-- Adicione mais produtos conforme necessário -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Doceria Encanto. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
